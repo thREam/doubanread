@@ -1,0 +1,29 @@
+{
+  "name": "知乎周刊",
+  "version": "0.1.0",
+  "authors": [
+    "zhoufanqq <410719615@qq.com>"
+  ],
+  "description": "从豆瓣获取知乎周刊",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "豆瓣 知乎周刊"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-cookies": "~1.4.3",
+    "angular-touch": "~1.4.5",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "ui-router": "~0.2.15"
+  }
+}

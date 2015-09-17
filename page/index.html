@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="douban">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>知乎周刊</title>
+        <script type="text/javascript" src="/lib/mod.js"></script>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="/bower_components/angular-loading-bar/build/loading-bar.css">
+        <link rel="stylesheet" type="text/css" href="/modules/common/common.scss">
+
+        <script type="text/javascript" src="/bower_components/ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="/bower_components/angular-loading-bar/build/loading-bar.js"></script>
+        <script type="text/javascript" src="/bower_components/angular-touch/angular-touch.js"></script>
+
+    </head>
+    <body ng-controller="MasterCtrl">
+<div ui-view></div>
+    <script type="text/javascript">
+        require('main');
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,65 @@
+html {
+  font-size: 100%; }
+
+.boxing, .article .inner .page {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.article {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden; }
+  .article .inner {
+    height: 100%;
+    transition-timing-function: ease;
+    transition-duration: 300ms;
+    transform: translate(0px, 0px) translateZ(0px); }
+    .article .inner .page {
+      height: 100%;
+      padding: 0 20px;
+      overflow: hidden;
+      float: left;
+      position: relative; }
+      .article .inner .page > h3 {
+        width: 100%;
+        font-size: 14px;
+        color: #855b5b;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e9eadf;
+        margin-top: 10px;
+        font-weight: normal; }
+      .article .inner .page .content {
+        margin-top: 10px; }
+        .article .inner .page .content p {
+          line-height: 1.5em;
+          min-height: 1.5em;
+          text-indent: 2em;
+          text-align: justify;
+          text-justify: inter-ideograph;
+          text-autospace: ideograph-alpha;
+          -webkit-hyphens: auto;
+          hyphens: auto;
+          word-wrap: break-word; }
+        .article .inner .page .content .illus {
+          padding: 12px 0; }
+        .article .inner .page .content .indent {
+          text-indent: 0; }
+        .article .inner .page .content .bold {
+          font-weight: bold; }
+        .article .inner .page .content .emphasize {
+          font-weight: bold;
+          font-style: normal;
+          line-height: 1.5em; }
+      .article .inner .page > footer {
+        color: #999;
+        font: .75em Georgia;
+        bottom: 1.2em;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0; }
+
+/*# sourceMappingURL=read.css.map */

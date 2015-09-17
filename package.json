@@ -1,0 +1,23 @@
+{
+  "name": "cms",
+  "version": "0.0.1",
+  "description": "build angular app with fis3",
+  "repository": {
+    "type": "git",
+    "url" : ""
+  },
+  "keywords": [
+    "angular",
+    "fis",
+    "fis3",
+    "client-side"
+  ],
+  "dependencies": {
+    "fis3-hook-module": "*",
+    "fis3-postpackager-loader": "*",
+    "fis-parser-sass": "*",
+    "fis-parser-less": "*",
+    "fis-preprocessor-annotate": "*"
+  },
+  "author": "zhoufan"
+}

@@ -1,0 +1,108 @@
+html{
+    font-size: 100%;
+}
+.boxing{
+	    			box-sizing:border-box;
+			-webkit-box-sizing:border-box; 
+}
+
+.article {
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+    	top:0;
+    	bottom:0;
+    	overflow: hidden;
+
+    .inner{
+		height: 100%;
+		transition-timing-function: ease; 
+		transition-duration: 0s; 
+		transform: translate(0px, 0px) translateZ(0px);
+        .overhide{
+            overflow: hidden;
+        }
+        .content{
+               margin: 0;
+               padding:0;
+                p{
+                    display: block;
+                        line-height: 1.5em;
+                            min-height: 1.5em;
+                            text-indent: 2em;
+                            text-align: justify;
+                            text-justify: inter-ideograph;
+                            text-autospace: ideograph-alpha;
+                            -webkit-hyphens: auto;
+                            hyphens: auto;
+                                word-wrap: break-word;
+                        i{
+                            font-style: normal;
+                        }
+                        img{
+                            margin: 0;
+                            padding:0;
+                        }
+                }
+                p.center{
+                    text-align: center;
+                    text-indent: 0;
+                }
+                .illus{
+                    
+                        text-indent: 0 !important;
+                        text-align: center;
+                    max-height: 46em;
+                    overflow: hidden;
+                }
+                .indent {
+                    text-indent: 0;
+                }
+                .bold {
+                    font-weight: bold;
+                }
+                .headline{
+                    font-weight: bold;
+                    font-style: normal;
+                    line-height: 1.5em;
+                }
+                
+         }
+    	.page{
+    		height: 100%;
+        padding:40px 24px;
+			overflow: hidden;
+			@extend .boxing; 
+			float: left;
+			position: relative;
+    		&>h3{
+                position:absolute;
+				    display: -webkit-box;
+    overflow: hidden;
+				    font-size: 14px;
+				    color: #855b5b;
+				    padding-bottom: 5px;
+				    border-bottom: 1px solid #e9eadf;
+				    top: .7em;
+				    font-weight: normal;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+
+    		}
+
+    		&>footer{
+
+    			    color: #999;
+				    font: .75em Georgia;
+				    bottom: 1.2em;
+				    position: absolute;
+				    text-align: center;
+				    left:0;
+				    right: 0;
+
+    			}
+    	}
+    	
+    }
+}

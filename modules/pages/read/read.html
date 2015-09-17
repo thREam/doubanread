@@ -1,0 +1,29 @@
+<!--
+    @require "./read.scss"
+-->
+<div class="article" >
+	<div class="inner" ng-style="{width:{{wapperWidth}}+'px',transform: transformLength}">
+
+<div class="content" ng-if="pageData.delPreContent" ng-style="{width:{{contentWidth}}+'px'}">
+	<p on-last-repeat delprecontent="pageData.delPreContent" pages="pageData.pages" ng-repeat="item in info " data-type="{{item.type}}" class="{{item.type}} {{item.data.format.p_align}}" ng-class="{bold:item.data.format.p_bold,indent:item.data.format.t_indent}">{{item.data|gettext}} <img ng-if="item.type=='illus'" width="{{contentWidth}}" height="{{contentWidth/item.data.size.large.width*item.data.size.large.height}}" src="{{item.data.size.large.src}}" alt="" /> </p>
+</div>
+
+
+
+
+		<div class="page" ng-swipe-left="next()" ng-swipe-right="pre()"  ng-repeat="vo in renderData" ng-style="{width:{{screenwidth}}+'px'}">
+			<h3 ng-style="{width:{{contentWidth}}+'px'}" >{{vo.title}}</h3>
+			
+			<div class="content overhide" ng-style="{height:{{vo.height}}+'em'}">
+				
+				<p ng-repeat="item in vo.data" ng-class="item.pclass" ng-style="{'margin-top':{{item.remain}}+'em'}"  ng-switch="item.type">
+					<img src="{{item.text}}" ng-switch-when="illus" ng-style="{width:item.w+'em',height:item.h+'em'}" alt="">
+					<i ng-switch-default >{{item.text}}</i></p>
+			</div>
+			<footer>
+				{{vo.page}}
+			</footer>
+		</div>		
+
+	</div>
+</div>
