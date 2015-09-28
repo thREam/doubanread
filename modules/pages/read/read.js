@@ -6,7 +6,7 @@ module.exports = {
 require('pages/read/page');
 
 angular.module('douban').controller('ReadController', function ($scope,decode,$http,Page,Render,$timeout) {
-	
+	$scope.loading=true;
 	var margin = 24;	// pix
 
 	$scope.current=1;
@@ -21,7 +21,7 @@ angular.module('douban').controller('ReadController', function ($scope,decode,$h
 	$scope.contentWidth=$scope.screenwidth-margin*2;  //40是margin-left  margin-right
 	var headHeight=0;
 	
-	$http.post("http://127.0.0.1:81/data.json",{}).
+	$http.jsonp("http://doubanread.sinaapp.com/test.php?callback=JSON_CALLBACK").
 	  then(function(response) {
 	    	var s = angular.fromJson(decode.dec(response.data.data));
 			var contents = s.posts[0].contents;
@@ -55,6 +55,7 @@ angular.module('douban').controller('ReadController', function ($scope,decode,$h
 	}
 	$scope.$watch('pageData.pages', function(newValue, oldValue) {
 	    $scope.renderData=Render.main(newValue,$scope.current);
+	    $scope.loading=false;
 	});
 
 });

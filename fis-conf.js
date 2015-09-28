@@ -98,6 +98,10 @@ fis.media('prod')
         packTo : "/pkg/vendor.js",
         packOrder: 100
     })
+    .match("/bower_components/jquery/dist/jquery.js",{
+        packTo : "/pkg/vendor.js",
+        packOrder: -2
+    })
     .match("bower_components/angular/angular.js",{
         packOrder: -1,
         important:true

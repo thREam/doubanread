@@ -4,7 +4,7 @@
 <div class="article" >
 	<div class="inner" ng-style="{width:{{wapperWidth}}+'px',transform: transformLength}">
 
-<div class="content" ng-if="pageData.delPreContent" ng-style="{width:{{contentWidth}}+'px'}">
+<div class="content" ng-if="pageData.delPreContent" ng-style="{width:{{contentWidth}}+'px',visibility: 'hidden'}">
 	<p on-last-repeat delprecontent="pageData.delPreContent" pages="pageData.pages" ng-repeat="item in info " data-type="{{item.type}}" class="{{item.type}} {{item.data.format.p_align}}" ng-class="{bold:item.data.format.p_bold,indent:item.data.format.t_indent}">{{item.data|gettext}} <img ng-if="item.type=='illus'" width="{{contentWidth}}" height="{{contentWidth/item.data.size.large.width*item.data.size.large.height}}" src="{{item.data.size.large.src}}" alt="" /> </p>
 </div>
 
@@ -26,4 +26,7 @@
 		</div>		
 
 	</div>
+</div>
+<div ng-if="loading" class="loading">
+	加载中...
 </div>
